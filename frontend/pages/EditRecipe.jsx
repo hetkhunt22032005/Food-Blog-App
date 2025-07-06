@@ -9,7 +9,7 @@ const EditRecipe = () => {
     const { id } = useParams();
     useEffect(() => {
         const getData = async () => {
-            await axios.get(`${process.env.VITE_API_BASE_URL}/recipe/${id}`).then((response) => {
+            await axios.get(`${import.meta.env.VITE_API_BASE_URL}/recipe/${id}`).then((response) => {
                 let res = response.data;
                 // console.log('we get the prvious recipe', res);
                 setRecipeData({
@@ -56,7 +56,7 @@ const EditRecipe = () => {
             // for (let pair of formData.entries()) {
             //     console.log(`${pair[0]}: ${pair[1]}`);
             // }
-            await axios.put(`${process.env.VITE_API_BASE_URL}/recipe/${id}`, formData, {
+            await axios.put(`${import.meta.env.VITE_API_BASE_URL}/recipe/${id}`, formData, {
                 headers: {
                     'authorization': `Bearer ${token}`
                 }
