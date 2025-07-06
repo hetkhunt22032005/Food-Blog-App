@@ -19,13 +19,13 @@ const InputForm = ({ formClose }) => {
         try {
             let res;
             if (isSignup) {
-                res = await axios.post(`http://localhost:5000/signup`, {
+                res = await axios.post(`${process.env.VITE_API_BASE_URL}/signup`, {
                     email,
                     password,
                     username
                 });
             } else {
-                res = await axios.post(`http://localhost:5000/login`, {
+                res = await axios.post(`${process.env.VITE_API_BASE_URL}/login`, {
                     email,
                     password
                 });

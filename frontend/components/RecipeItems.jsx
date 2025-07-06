@@ -20,7 +20,7 @@ const RecipeItems = ({ allRecipes }) => {
             return;
         }
         try {
-            const response = await axios.delete(`http://localhost:5000/recipe/${id}`);
+            const response = await axios.delete(`${process.env.VITE_API_BASE_URL}/recipe/${id}`);
             console.log("Recipe deleted successfully", response.data);
             window.location.reload();
         } catch (error) {
@@ -61,7 +61,7 @@ const RecipeItems = ({ allRecipes }) => {
                     onClick={() => openRecipe(item._id)}
                 >
                     <img
-                        src={`http://localhost:5000/images/${item.coverImage}`}
+                        src={`${process.env.VITE_API_BASE_URL}/images/${item.coverImage}`}
                         width="120px"
                         height="100px"
                         alt={item.title}

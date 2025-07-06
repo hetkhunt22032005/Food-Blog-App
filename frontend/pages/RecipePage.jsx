@@ -16,7 +16,7 @@ const RecipePage = () => {
     useEffect(() => {
         const fetchRecipe = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:5000/recipe/${id}`);
+                const { data } = await axios.get(`${process.env.VITE_API_BASE_URL}/recipe/${id}`);
                 setRecipe(data);
             } catch (err) {
                 console.error(err);
@@ -40,7 +40,7 @@ const RecipePage = () => {
         <main className="recipe-page">
             <button className="back-btn top" onClick={() => navigate(-1)}>← Back</button>
             <section className="recipe-header">
-                <img src={`http://localhost:5000/images/${recipe.coverImage}`} alt={recipe.title} className="recipe-img" />
+                <img src={`${process.env.VITE_API_BASE_URL}/images/${recipe.coverImage}`} alt={recipe.title} className="recipe-img" />
                 <div className="recipe-info">
                     <h1 className="recipe-title">{recipe.title}</h1>
                     <p className="recipe-meta">

@@ -36,7 +36,7 @@ const AddRecipeForm = () => {
             // for (let pair of formData.entries()) {
             //     console.log(`${pair[0]}: ${pair[1]}`);
             // }
-            await axios.post("http://localhost:5000/recipe", formData, {
+            await axios.post(`${process.env.VITE_API_BASE_URL}/recipe`, formData, {
                 headers: {
                     'authorization': `Bearer ${token}`
                 }

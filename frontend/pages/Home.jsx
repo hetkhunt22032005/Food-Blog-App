@@ -109,7 +109,7 @@ const Home = () => {
     useEffect(() => {
         const fetchRecipes = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/recipe');
+                const res = await axios.get(`${process.env.VITE_API_BASE_URL}/recipe`);
                 setRecipes(res.data);
             } catch (err) {
                 console.error('Error fetching recipes:', err);
