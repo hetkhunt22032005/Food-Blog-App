@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: #f7f7f8;
+    --white: #ffffff;
+    --primary: #213547;
+    --primary-light: #2c4860;
+    --accent: #d4f6e8;
+    --text: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+
+}
+
+.recipe-page {
+    max-width: 1500px;
+    max-height: 650px;
+    margin: 2rem auto;
+    padding: 1.2rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.back-btn {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    margin: 1rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.back-btn:hover {
+    background: var(--primary-light);
+}
+
+.back-btn.top {
+    margin-bottom: 1rem;
+}
+
+.back-btn.bottom {
+    margin-top: 1rem;
+}
+
+.recipe-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.recipe-img {
+    flex: 1 1 280px;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-info {
+    flex: 1 1 300px;
+}
+
+.recipe-title {
+    font-size: 1.7rem;
+    margin-bottom: 0.4rem;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.badge {
+    background: var(--accent);
+    padding: 0.25rem 0.7rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.recipe-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.ingredients,
+.instructions {
+    flex: 1 1 400px;
+}
+
+.ingredients ul {
+    list-style-type: disc;
+    margin-left: 1rem;
+    font-size: 0.95rem;
+}
+
+.instructions p {
+    white-space: pre-wrap;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+.loader,
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    font-size: 1.4rem;
+}
+
+.error-page h2 {
+    margin-bottom: 0.8rem;
+}
