@@ -111,13 +111,6 @@ npm start
 Pull requests are welcome! For major changes, open an issue first to discuss what you would like to change.
 
 ---
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## 📬 Contact
 
-For any inquiries, contact [your.email@example.com](mailto:your.email@example.com)
+For any inquiries, contact [hetkhunt22032005@gmail.com](mailto:hetkhunt22032005@gmail.com)
